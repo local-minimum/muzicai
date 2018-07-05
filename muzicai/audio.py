@@ -27,7 +27,7 @@ def get_audio(path):
     return a
 
 
-def mono_as_sterio(audio):
+def mono_as_stereo(audio):
     if audio.shape[1] == 1:
         return Audio(
             np.vstack((audio.data[:, 0], audio.data[:, 0])).T,

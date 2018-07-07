@@ -8,4 +8,6 @@ attrs==18.1.0
 cffi==1.11.5              # via soundfile
 numpy==1.14.5
 pycparser==2.18           # via cffi
+scipy==1.1.0              # via stft
 soundfile==0.10.2
+stft==0.5.2

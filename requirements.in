@@ -1,3 +1,5 @@
 attrs
 soundfile
 numpy
+stft
+keras

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 from subprocess import run
+import os
+from tempfile import TemporaryDirectory
 from io import BytesIO
+
 import soundfile as sf
 import attr
-import os
 import numpy as np
-from tempfile import TemporaryDirectory
+import stft
 
 Audio = attr.make_class('Audio', ['data', 'bitrate'])
 
@@ -34,3 +36,7 @@ def mono_as_stereo(audio):
             audio.bitrate,
         )
     return audio
+
+
+def get_spec(audio):
+    return stft.spectrogram(audio.data)
